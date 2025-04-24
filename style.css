@@ -1,0 +1,286 @@
+body{
+    background-color: #F4EDE8;
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+header{
+    background-color: #ecdde5;
+    /* opacity: 0.5; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    animation: slideDown 0.5s ease;
+    position: fixed;
+    z-index: 9999;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 10;
+  }
+}
+
+header nav{
+    width: 100%;
+    display: flex;
+}
+header nav ul{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3%;
+    padding-right: 2%;
+
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    font-family: fredoka;
+    font-size: 20px;
+    color: #6F4E44;
+    transition: color 0.3s ease;
+}
+header nav ul li a:hover{
+    color: #E295B5;
+}
+header nav ul li a.active{
+    color: #C97C63;
+}
+main{
+    width: 100%;
+}
+.inicio{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.foto{
+    width: 40%;
+    height: auto;
+}
+.foto img{
+    width: 100%;
+}
+.presentacion{
+    width: 60%;
+    padding-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.presentacion h1{
+    color: #E295B5;
+    font-family: Chewy;
+    font-size: 5rem;
+    margin: 0;
+}
+.presentacion p{
+    width: 70%;
+    font-family: Fredoka;
+    font-size: 1.2rem;
+    text-align: justify;
+
+}
+.botones{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.presentacion button{
+    background-color: #A97C73;
+    color: #fff;
+    font-family: Fredoka;
+    font-size: 1.2rem;
+    width: 12rem;
+    height: 2.5rem;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+}
+.pasatiempos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.subtitulo{
+    width: 100%;
+    height: 10rem;
+    font-family: Chewy;    
+    color: #A97C73;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subtitulo h2{
+    font-size: 4.5rem;
+}
+.carrusel{
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    z-index: 1;
+}
+.carrusel1, .carrusel2, .carrusel3{
+    width: 25%;
+}
+.pparrafo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Fredoka;
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 1rem;
+    width: 80%;
+}
+.contenido{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+.mfoto{
+    width: 25%;
+}
+.mfoto img{
+    width: 100%;
+}
+.mparrafo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Fredoka;
+    font-size: 1.2rem;
+    text-align: justify;
+    width: 50%;
+}
+.acontenido{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.aparrafo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Fredoka;
+    font-size: 1.2rem;
+    text-align: justify;
+    width: 80%;
+}
+.afotos{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+}
+.corazon{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.like-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none; 
+}
+.like-button img {
+    width: 24px; 
+    height: 24px;
+    transition: opacity 0.3s ease; 
+}
+.footer {
+    background-color: #ffeef8;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #7d5a8a;
+    border-top: 2px dashed #f8c6dc;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+  .footer-content p {
+    margin: 8px 0;
+}
+
+/* Celular */
+@media (max-width: 480px) {
+    header{
+        display: none;
+    }
+    header nav{
+        display: none;
+    }
+    .foto{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .foto img{
+        width: 70%;
+        margin-top: 5%;
+    }
+    .presentacion h1 {
+        display: none;
+    }
+    .inicio{
+        display: flex;
+        flex-direction: column;
+    }
+    .presentacion{
+        display: flex;
+        align-items: center; 
+        width: 100%;
+    }
+    .carrusel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        
+    }
+    .carrusel1, .carrusel2, .carrusel3{
+        width: 80%;
+    }
+    
+
+}
+
+  /* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+    .presentacion h1 {
+        display: none;
+    }
+    .foto{
+        display: flex;
+        align-items: center;
+    }
+    .inicio{
+        padding-top: 10%;
+    }
+}
+  
+  /* Escritorio */
+@media (min-width: 769px) {
+   
+}
